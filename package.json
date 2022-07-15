@@ -1,0 +1,65 @@
+{
+  "name": "@chiubaka/test-repo",
+  "version": "0.0.1",
+  "description": "Test repository for generator-chiubaka-typescript-package to play with",
+  "scripts": {
+    "build": "",
+    "deploy": "npm publish --access public",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx,.yml,.yaml,.json .",
+    "lint:fix": "yarn run lint --fix",
+    "lint:staged": "lint-staged",
+    "prepare": "husky install",
+    "test": "jest",
+    "test:ci": "yarn run test --ci --runInBand --coverage --reporters=default --reporters=jest-junit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chiubaka/test-repo.git"
+  },
+  "keywords": [
+    "generated",
+    "yeoman",
+    "typescript"
+  ],
+  "author": "Daniel Chiu <daniel@chiubaka.com>",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/chiubaka/test-repo/issues"
+  },
+  "homepage": "https://github.com/chiubaka/test-repo#readme",
+  "devDependencies": {
+    "@chiubaka/eslint-config": "0.1.0",
+    "@chiubaka/tsconfig": "0.0.3",
+    "@types/jest": "28.1.5",
+    "@types/node": "18.0.4",
+    "eslint": "8.19.0",
+    "husky": "8.0.1",
+    "jest": "28.1.3",
+    "jest-junit": "14.0.0",
+    "lint-staged": "13.0.3",
+    "prettier": "2.7.1",
+    "ts-jest": "28.0.6",
+    "ts-node": "10.9.1",
+    "typescript": "4.7.4"
+  },
+  "devDependenciesComments": {
+    "typescript": "TypeScript support for this project",
+    "@chiubaka/eslint-config": "Shared linting configs for the Chiubaka Technologies ecosystem",
+    "@chiubaka/tsconfig": "Shared TSConfig settings for the Chiubaka Technologies ecosystem",
+    "eslint": "Linting and code quality checks",
+    "lint-staged": "Linting of just staged files",
+    "prettier": "Code formatting for consistent style",
+    "jest": "Test runner from Meta",
+    "@types/jest": "Types for jest",
+    "ts-node": "To enable TypeScript configuration files for Jest",
+    "@types/node": "Types for NodeJS. Peer dependency of ts-node.",
+    "ts-jest": "TypeScript preprocessor with source map support for Jest",
+    "jest-junit": "JUnit report formatter for Jest for compatibility with CircleCI test results format",
+    "husky": "Modern native Git hooks made easy"
+  },
+  "jest-junit": {
+    "addFileAttribute": "true",
+    "classNameTemplate": "{suitename}",
+    "outputDirectory": "reports/junit"
+  }
+}
